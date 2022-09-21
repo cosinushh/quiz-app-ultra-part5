@@ -1,8 +1,7 @@
-import { useState } from "react";
 import "./Navigation.css";
 
-function Navigation() {
-  const [page, setPage] = useState("home");
+function Navigation({ page, onClick }) {
+  //console.log(page, onClick);
 
   return (
     <nav className="navigation">
@@ -13,7 +12,7 @@ function Navigation() {
           }`}
         >
           <button
-            onClick={() => setPage("home")}
+            onClick={() => onClick("home")}
             type="button"
             className="navigation__button"
           >
@@ -28,7 +27,7 @@ function Navigation() {
           }`}
         >
           <button
-            onClick={() => setPage("bookmark")}
+            onClick={() => onClick("bookmark")}
             type="button"
             className="navigation__button"
           >
@@ -43,7 +42,7 @@ function Navigation() {
           }`}
         >
           <button
-            onClick={() => setPage("create")}
+            onClick={() => onClick("create")}
             type="button"
             className="navigation__button"
           >
@@ -58,7 +57,7 @@ function Navigation() {
           }`}
         >
           <button
-            onClick={() => setPage("profile")}
+            onClick={() => onClick("profile")}
             type="button"
             className="navigation__button"
           >

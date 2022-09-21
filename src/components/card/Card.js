@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Card.css";
 
-function Card({ question, answer, tags }) {
+function Card({ question, answer, tags, bookmarked }) {
   const [showAnswer, setShowAnswer] = useState(false);
 
   return (
@@ -27,7 +27,12 @@ function Card({ question, answer, tags }) {
         ))}
       </ul>
       <div className="card__button-bookmark">
-        <button className="card__bookmark" aria-label="bookmark" type="button">
+        <button
+          onClick={() => console.log(bookmarked)}
+          className={`card__bookmark ${bookmarked && "card__bookmark--active"}`}
+          aria-label="bookmark"
+          type="button"
+        >
           <svg className="card__bookmark-icon" viewBox="0 0 24 24">
             <path d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5C19,3.89 18.1,3 17,3Z" />
           </svg>
