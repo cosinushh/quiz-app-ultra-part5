@@ -1,0 +1,7 @@
+.form {
+  display: grid;
+}
+
+.form__input {
+  margin: 5px auto 20px auto;
+}

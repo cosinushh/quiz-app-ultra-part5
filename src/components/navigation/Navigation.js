@@ -1,6 +1,6 @@
 import "./Navigation.css";
 
-function Navigation({ page, onClick }) {
+function Navigation({ page, changePageState }) {
   //console.log(page, onClick);
 
   return (
@@ -12,7 +12,7 @@ function Navigation({ page, onClick }) {
           }`}
         >
           <button
-            onClick={() => onClick("home")}
+            onClick={() => changePageState("home")}
             type="button"
             className="navigation__button"
           >
@@ -27,7 +27,7 @@ function Navigation({ page, onClick }) {
           }`}
         >
           <button
-            onClick={() => onClick("bookmark")}
+            onClick={() => changePageState("bookmark")}
             type="button"
             className="navigation__button"
           >
@@ -42,7 +42,7 @@ function Navigation({ page, onClick }) {
           }`}
         >
           <button
-            onClick={() => onClick("create")}
+            onClick={() => changePageState("create")}
             type="button"
             className="navigation__button"
           >
@@ -57,7 +57,7 @@ function Navigation({ page, onClick }) {
           }`}
         >
           <button
-            onClick={() => onClick("profile")}
+            onClick={() => changePageState("profile")}
             type="button"
             className="navigation__button"
           >

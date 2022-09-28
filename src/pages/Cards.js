@@ -1,6 +1,6 @@
 import Card from "../components/card/Card";
 
-function Cards({ cards }) {
+function Cards({ cards, deleteCard, toggleBookmark}) {
   return cards.map((card) => (
     <Card
       key={card.id}
@@ -8,6 +8,9 @@ function Cards({ cards }) {
       answer={card.answer}
       tags={card.tags}
       bookmarked={card.bookmarked}
+      deleteCard={deleteCard}
+      id = {card.id}
+      toggleBookmark={toggleBookmark}
     />
   ));
 }
