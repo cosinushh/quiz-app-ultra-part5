@@ -21,15 +21,12 @@
   justify-content: center;
 }
 
-.navigation__list-item--active {
-  background-color: var(--secondary-light);
-}
 
 .navigation__list-item:not(:first-child) {
   border-left: 1px solid var(--black);
 }
 
-.navigation__button {
+/* .navigation__button {
   background: transparent;
   border: none;
   font-size: 1em;
@@ -41,7 +38,7 @@
 .navigation__button:hover {
   opacity: 0.5;
   cursor: pointer;
-}
+} */
 
 .navigation__icon {
   height: 1.5em;
